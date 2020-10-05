@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.header{
+    background: #6495ed;
+}
+
+form{
+    textarea{
+        resize: none;
+    }
+    label{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-weight: 600;
+}
+
+.all_posts{
+    .post_details{
+        .title{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .descr{
+            font-size: 16px;
+        }
+    }
+}
+
+button{
+    letter-spacing: 1px;
+}
