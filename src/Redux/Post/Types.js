@@ -1,0 +1,9 @@
+export const CREATE_NEWPOST = 'CREATE_NEWPOST';
+export const EDIT_POST = 'EDIT_POST';
+export const UPDATE_POST = 'UPDATE_POST';
+export const CANCEL_UPDATE = 'CANCEL_UPDATE';
+export const DELETE_POST = 'DELETE_POST';
+export const HANDLE_TITLE = 'HANDLE_TITLE';
+export const HANDLE_DESCR = 'HANDLE_DESCR';
+export const HANDLE_TITLE_UPDATE = 'HANDLE_TITLE_UPDATE';
+export const HANDLE_DESCR_UPDATE = 'HANDLE_DESCR_UPDATE';

@@ -1,21 +1,14 @@
 import React, { Component } from 'react'
 import shortid from "shortid";
+import { createNewPost, handleTitle, handleDescr, editPost, updatePost, deletePost } from '../../Redux/index';
+import { connect } from 'react-redux';
 
 class AllPosts extends Component {
 
-    constructor(props) {
-        super(props)
-    
-        this.state = {
-            postId : null,
-            updatedTitle : '',
-            updatedDescr : ''
-        }
-    }
 
     handleEdit = e => {
         let item_id = e.target.getAttribute("data-id");
-        this.props.editPost(item_id);
+        this.props.setEditPost(item_id);
     }   
 
     handleDelete = e => {
@@ -24,6 +17,8 @@ class AllPosts extends Component {
     }
 
     render() {
+
+        const posts = this.props.postList
 
         return (
             <div className='all_posts'>
@@ -39,7 +34,7 @@ class AllPosts extends Component {
                         <div className='row'>
 
                             {
-                                this.props.posts.map( item => {
+                                posts.map( item => {
                                     return(
                                         <div key={item.id} id={item.id} className='col-xs-12 col-sm-6 col-md-4'>
                                             <div className='inner mb-4 p-2'>
@@ -66,4 +61,21 @@ class AllPosts extends Component {
     }
 }
 
-export default AllPosts
+
+const mapStateToProps = state => {
+    return{
+        stateObj : state,
+        postList : state.posts
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AllPosts)
